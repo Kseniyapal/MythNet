@@ -15,10 +15,3 @@ class Concept(models.Model):
     synonym = models.ManyToManyField('self')
     antonym = models.ManyToManyField('self')
     association = models.ManyToManyField('self')
-
-
-class Achievement(models.Model):
-    name = models.CharField(max_length=64)
-
-    def __str__(self):
-        return self.name
