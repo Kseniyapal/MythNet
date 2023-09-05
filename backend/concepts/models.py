@@ -12,6 +12,8 @@ class Concept(models.Model):
         'Определение',
         max_length=255
     )
-    synonym = models.ManyToManyField('self')
-    antonym = models.ManyToManyField('self')
-    association = models.ManyToManyField('self')
+    synonym = models.ManyToManyField('self',
+                                     blank=True,)
+    antonym = models.ManyToManyField('self',
+                                     blank=True,)
+    association = models.ManyToManyField('self', blank=True)
