@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+  {% block title %}
+      Нет шапки:(
+  {% endblock %}
+  </title>
+  <link rel="stylesheet"  href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+      <main>
+    <div class="container">
+        {% block content %}
+        Пусто:(
+        {% endblock%}
+    </div>
+</main>
+<footer>
+  
+</footer>
+</body>
+</html> 
