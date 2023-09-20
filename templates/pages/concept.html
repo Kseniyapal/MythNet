@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+  Mythnet
+ {%endblock%}
+
+
+ {% block content %}
+
+    <div class="container">
+        <p> {{ object.name }} </p>
+        <p> {{ object.definition }} </p>
+    </div>
+{% endblock %}

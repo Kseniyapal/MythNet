@@ -7,13 +7,13 @@
 
 
 {% block content %}
-    <div class="search-bar">
-      <input type="text" placeholder="Search...">
-      <button type="submit">Search</button>
-    </div>
+<form  method="GET" class="search-bar">
+  <input type="text" name="search" placeholder="Search...">
+  <button type="submit">Search</button>
+</form>
     <div class="container">
       {% for obj in objects %}
-      <p>{{ obj.name }}</p>
+      <p><a href="{% url 'api:concepts-detail'  obj.id  %}">{{ obj.name }}</a></p>
     {% endfor %}
 
     </div>

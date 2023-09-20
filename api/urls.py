@@ -9,5 +9,6 @@ router = routers.DefaultRouter()
 router.register('concepts', ConceptViewSet, basename='concepts')
 
 urlpatterns = [
-    path('', include(router.urls))
+    path('', include(router.urls)),
+    
     ]

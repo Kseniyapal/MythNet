@@ -17,3 +17,6 @@ class Concept(models.Model):
     antonym = models.ManyToManyField('self',
                                      blank=True,)
     association = models.ManyToManyField('self', blank=True)
+
+    def get_id(self):
+        return self.pk

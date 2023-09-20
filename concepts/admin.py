@@ -6,7 +6,7 @@ from .models import Concept
 
 @register(Concept)
 class ConceptAdmin(ModelAdmin):
-    list_display = ['name', 'definition',
+    list_display = ['pk', 'name', 'definition',
                     'get_synonym',
                     'get_antonym',
                     'get_association']
