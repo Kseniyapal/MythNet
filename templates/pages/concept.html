@@ -5,11 +5,10 @@
   Mythnet
  {%endblock%}
 
-
  {% block content %}
-
-    <div class="container">
-        <p> {{ object.name }} </p>
-        <p> {{ object.definition }} </p>
-    </div>
-{% endblock %}
+ <div class="container-concept">
+    <img src="{{ object.image }}" style="width: 300px; height: 200px;">
+    <p>{{ obj.name }}</p>
+    <p> Определение: {{ object.definition }}</p>
+ </div>
+ {% endblock %}

@@ -17,7 +17,7 @@ class ConceptViewSet(ModelViewSet):
         queryset = self.filter_queryset(self.get_queryset())
         if queryset.exists():
             serializer = self.get_serializer(queryset, many=True)
-            print(serializer.data[0])
+            print(serializer.data[0]['synonym'])
             return render(request,  'pages/list_concepts.html', {'objects': serializer.data})
         else:
             return render(request, 'pages/index.html')

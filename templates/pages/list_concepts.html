@@ -7,14 +7,18 @@
 
 
 {% block content %}
-<form  method="GET" class="search-bar">
-  <input type="text" name="search" placeholder="Search...">
-  <button type="submit">Search</button>
-</form>
-    <div class="container">
-      {% for obj in objects %}
-      <p><a href="{% url 'api:concepts-detail'  obj.id  %}">{{ obj.name }}</a></p>
-    {% endfor %}
-
+<div class="container">
+  <form method="GET" class="search-bar">
+    <input type="text" name="search" placeholder="Search...">
+    <button type="submit">Search</button>
+  </form>
+  <div class="card-container">
+    {% for obj in objects %}
+    <div class="card">
+      <img src="{{ obj.image }}" style="width: 300px; height: 200px;">
+      <p><a href="{% url 'api:concepts-detail' obj.id %}">{{ obj.name }}</a></p>
     </div>
+    {% endfor %}
+  </div>
+</div>
 {% endblock %}

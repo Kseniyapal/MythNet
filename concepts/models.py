@@ -12,11 +12,13 @@ class Concept(models.Model):
         'Определение',
         max_length=255
     )
+    image = models.ImageField(
+        'Картинка',
+        upload_to='images/')
+
     synonym = models.ManyToManyField('self',
                                      blank=True,)
     antonym = models.ManyToManyField('self',
                                      blank=True,)
     association = models.ManyToManyField('self', blank=True)
 
-    def get_id(self):
-        return self.pk

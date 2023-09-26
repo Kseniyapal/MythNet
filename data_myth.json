@@ -1,0 +1,44 @@
+{
+	"terms": [
+		{
+			"id": 1,
+			"term": "Миф",
+			"description": "Повествование, передающее представления людей о мире, месте человека в нём, о происхождении всего сущего, о богах, героях",
+			"image": "images/myth.jpg",
+			"relations": [
+				{
+					"id_rel": 2,
+					"type": "гипоним"
+				},
+				{
+					"id_rel": 3,
+					"type": "ассоциация"
+				}
+			]
+		},
+		{
+			"id": 2,
+			"term": "Греческий",
+			"description": "Греческие мифы",
+			"image": "images/greek.jpg",
+			"relations": [
+				{
+					"id_rel": 1,
+					"type": "гипероним"
+				}
+			]
+		},
+		{
+			"id": 3,
+			"term": "Мифология",
+			"description": "...",
+			"image": "images/mythology.jpg",
+			"relations": [
+				{
+					"id_rel": 1,
+					"type": "ассоциация"
+				}
+			]
+		}
+	]
+}
