@@ -7,8 +7,36 @@
 
  {% block content %}
  <div class="container-concept">
-    <img src="{{ object.image }}" style="width: 300px; height: 200px;">
-    <p>{{ obj.name }}</p>
-    <p> Определение: {{ object.definition }}</p>
+   <div class = "image-container-concept">
+   <img src="{{ object.image }}" style="width: 30%;
+   height: 50%;
+   object-fit: contain; position: absolute; left: 50px; top: 150px">
+   </div>
+   <div style="margin-left: 450px;">
+     <p>{{ object.name }}</p>
+     <p>Определение: {{ object.definition }}</p>
+     <p>Synonyms:</p>
+    <ul>
+      {% for synonym in synonyms %}
+        <li><a href="{% url 'api:concepts-detail' synonym.id %}">{{ synonym.name }}</a></li>
+      {% endfor %}
+    </ul>
+
+    <p>Antonyms:</p>
+    <ul>
+      {% for antonym in antonyms %}
+        <li><a href="{% url 'api:concepts-detail' antonym.id %}">{{ antonym.name }}</a></li>
+      {% endfor %}
+    </ul>
+
+    <p>Associations:</p>
+    <ul>
+      {% for association in associations %}
+        <li><a href="{% url 'api:concepts-detail' association.id %}">{{ association.name }}</a></li>
+      {% endfor %}
+    </ul>
+   </div>
+   <div style="clear: both;"></div>
  </div>
+
  {% endblock %}

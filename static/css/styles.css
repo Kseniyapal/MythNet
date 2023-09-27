@@ -90,7 +90,19 @@ button[type="submit"] {
   align-items: center;
 }
 
+.image-container-concept {
 
+  width: 100px;
+  height: 130px;
+  
+}
+
+.image-container {
+
+  width: 200px;
+  height: 300px;
+  
+}
 
 .definition {
   font-size: 18px;

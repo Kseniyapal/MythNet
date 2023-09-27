@@ -8,36 +8,186 @@
 			"relations": [
 				{
 					"id_rel": 2,
-					"type": "гипоним"
+					"type": "synonym"
 				},
 				{
 					"id_rel": 3,
-					"type": "ассоциация"
+					"type": "antonym"
+				},
+				{
+					"id_rel": 4,
+					"type": "synonym"
+				},
+				{
+					"id_rel": 4,
+					"type": "association"
+				},
+				{
+					"id_rel": 5,
+					"type": "association"
 				}
+
 			]
 		},
 		{
 			"id": 2,
-			"term": "Греческий",
-			"description": "Греческие мифы",
-			"image": "images/greek.jpg",
+			"term": "Предание",
+			"description": "Фольклорный жанр, устный рассказ о реальных происшествиях и людях прошлого, передающийся из поколения в поколение",
+			"image": "images/predanie.jpg",
 			"relations": [
 				{
 					"id_rel": 1,
-					"type": "гипероним"
+					"type": "synonym"
+				},
+				{
+					"id_rel": 4,
+					"type": "synonym"
+				},
+				{
+					"id_rel": 4,
+					"type": "association"
+				},
+				{
+					"id_rel": 5,
+					"type": "association"
+				},
+				{
+					"id_rel": 3,
+					"type": "antonym"
+				},
+				{
+					"id_rel": 6,
+					"type": "antonym"
+				},
+				{
+					"id_rel": 7,
+					"type": "antonym"
 				}
 			]
 		},
 		{
 			"id": 3,
+			"term": "Действительность",
+			"description": "Осуществлённая реальность во всей своей совокупности",
+			"image": "images/destvitelnost.jpg",
+			"relations": [
+				{
+					"id_rel": 7,
+					"type": "synonym"
+				},
+				{
+					"id_rel": 6,
+					"type": "association"
+				},
+				{
+					"id_rel": 5,
+					"type": "association"
+				},
+				{
+					"id_rel": 4,
+					"type": "antonym"
+				}
+			]
+		},
+		{
+			"id": 4,
+			"term": "Легенда",
+			"description": "Жанр несказочного прозаического фольклора, который подразумевает повествование о человеческих действиях, по мнению рассказчика и слушателей, имевших место в истории человечества",
+			"image": "images/legenda.jpg",
+			"relations": [
+				{
+					"id_rel": 2,
+					"type": "synonym"
+				},
+				{
+					"id_rel": 3,
+					"type": "antonym"
+				},
+				{
+					"id_rel": 1,
+					"type": "synonym"
+				},
+				{
+					"id_rel": 4,
+					"type": "association"
+				},
+				{
+					"id_rel": 5,
+					"type": "association"
+				}
+			]
+		},
+		{
+			"id": 5,
 			"term": "Мифология",
-			"description": "...",
+			"description": "Совокупность мифов",
 			"image": "images/mythology.jpg",
+			"relations": [
+				{
+					"id_rel": 1,
+					"type": "association"
+				},
+				{
+					"id_rel": 8,
+					"type": "synonym"
+				},
+				{
+					"id_rel": 9,
+					"type": "antonym"
+				}
+			]
+		},
+		{
+			"id": 6,
+			"term": "Летопись",
+			"description": "Исторический жанр, представляющий собой погодовую, более или менее подробную запись исторических событий",
+			"image": "images/letopis.jpg",
+			"relations": [
+				{
+					"id_rel": 7,
+					"type": "synonym"
+				},
+				{
+					"id_rel": 3,
+					"type": "association"
+				},
+				{
+					"id_rel": 5,
+					"type": "association"
+				},
+				{
+					"id_rel": 4,
+					"type": "antonym"
+				}
+			]
+		},
+		{
+			"id": 7,
+			"term": "Быль",
+			"description": "Событие, происходившее в действительности",
+			"image": "images/bil.jpg",
+			"relations": [
+
+			]
+		},
+		{
+			"id": 8,
+			"term": "Баснословие",
+			"description": "Повествование о легендарных событиях и лицах",
+			"image": "images/legenda.jpg",
 			"relations": [
 				{
 					"id_rel": 1,
 					"type": "ассоциация"
 				}
+			]
+		},
+		{
+			"id": 9,
+			"term": "Факт",
+			"description": "Термин, в широком смысле может выступать как синоним истины",
+			"image": "images/legenda.jpg",
+			"relations": [
 			]
 		}
 	]

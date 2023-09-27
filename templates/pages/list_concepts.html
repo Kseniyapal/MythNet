@@ -19,6 +19,30 @@
       <p><a href="{% url 'api:concepts-detail' obj.id %}">{{ obj.name }}</a></p>
     </div>
     {% endfor %}
+    <div class="pagination">
+      <!-- Кнопка "Предыдущая страница" -->
+      {% if page_obj.has_previous %}
+          <a href="?page={{ page_obj.previous_page_number }}">Предыдущая</a>
+      {% else %}
+          <span class="disabled">Предыдущая</span>
+      {% endif %}
+  
+      <!-- Ссылки на все страницы -->
+      {% for page_num in page_obj.paginator.page_range %}
+          {% if page_num == page_obj.number %}
+              <span class="current-page">{{ page_num }}</span>
+          {% else %}
+              <a href="?page={{ page_num }}">{{ page_num }}</a>
+          {% endif %}
+      {% endfor %}
+  
+      <!-- Кнопка "Следующая страница" -->
+      {% if page_obj.has_next %}
+          <a href="?page={{ page_obj.next_page_number }}">Следующая</a>
+      {% else %}
+          <span class="disabled">Следующая</span>
+      {% endif %}
+  </div>
   </div>
 </div>
 {% endblock %}

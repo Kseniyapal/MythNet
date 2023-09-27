@@ -2,6 +2,7 @@ from django.db import models
 
 
 class Concept(models.Model):
+    """Модель понятие"""
 
     name = models.CharField(
         'Название',
@@ -21,4 +22,3 @@ class Concept(models.Model):
     antonym = models.ManyToManyField('self',
                                      blank=True,)
     association = models.ManyToManyField('self', blank=True)
-
