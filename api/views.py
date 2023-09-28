@@ -35,7 +35,7 @@ class ConceptViewSet(ModelViewSet):
         page_number = request.GET.get('page')
         page_obj = paginator.get_page(page_number)
         serializer = self.get_serializer(page_obj, many=True)
-        return render(request, 'pages/list_concepts.html', 
+        return render(request, 'pages/list_concepts.html',
                       {'objects': serializer.data, 'page_obj': page_obj})
 
     def retrieve(self, request, *args, **kwargs):
@@ -53,7 +53,7 @@ class ConceptViewSet(ModelViewSet):
         list_association = get_list_by_id(
             serializer_concepts.data, serializer.data['association']
             )
-        return render(request,  'pages/concept.html', 
+        return render(request,  'pages/concept.html',
                       {'object': serializer.data,
                        'synonyms': list_synonym,
                        'antonyms': list_antonym,
